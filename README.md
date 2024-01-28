@@ -19,4 +19,6 @@ The db context class is the main class that coordinates Entity Framework functio
 
 ## Prevent over-posting
 
-Todo
+- The act of limiting the data that's input and returned from a model
+- DTOs (Data Transfer Objects) represent a subset of a model to be returned (also referred to sometimes as a the view model or input model)
+- DTOs are used to prevent over-posting, hide fields that should not be viewed by the client (security), return payload size, and give the client more manageable data
