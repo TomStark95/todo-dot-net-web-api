@@ -1,4 +1,4 @@
-# dot-net-web-api-demo
+# todo-dot-net-web-api
 
 Very basic CRUD style ASP.NET Core Web API.
 
@@ -13,9 +13,9 @@ Very basic CRUD style ASP.NET Core Web API.
 
 A model class is used to represent a state of data that the app manages. Model class files in this repo sit under the Models folder by convention.
 
-## A Database Context Class
+## Services
 
-The db context class is the main class that coordinates Entity Framework functionality for data models. This context is registered in the dependency injection container within Program.cs.
+The TodoService connects to MongoDB via the MongoClient instance. This service is registered in the dependency injection container within Program.cs as a singleton.
 
 ## Prevent over-posting
 
