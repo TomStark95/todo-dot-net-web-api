@@ -1,10 +1,18 @@
-﻿namespace TodoApi.Models
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System.Text.Json.Serialization;
+
+namespace TodoApi.Models
 {
     public class TodoItem
     {
-        public long Id { get; set; }
-        public string? Name { get; set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? Id { get; set; }
+
+        [BsonElement("Name")]
+        [JsonPropertyName("TodoTitle")]
+        public string Name { get; set; } = null!;
         public bool IsComplete { get; set; }
-        public string? Secret { get; set; }
     }
 }
